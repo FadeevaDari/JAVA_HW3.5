@@ -79,4 +79,40 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void shouldNotFindBookName() {
+        String text = "name5";
+
+        Product[] expected = new Product[]{};
+        Product[] actual = productManager.searchBy(text);
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotFindBookAuthor() {
+        String text = "author5";
+
+        Product[] expected = new Product[]{};
+        Product[] actual = productManager.searchBy(text);
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotFindSmartphoneName() {
+        String text = "name6";
+
+        Product[] expected = new Product[]{};
+        Product[] actual = productManager.searchBy(text);
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotFindSmartphoneVendor() {
+        String text = "vendor5";
+
+        Product[] expected = new Product[]{};
+        Product[] actual = productManager.searchBy(text);
+        assertArrayEquals(expected, actual);
+    }
+
 }
