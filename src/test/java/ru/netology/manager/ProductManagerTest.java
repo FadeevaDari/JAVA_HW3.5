@@ -79,4 +79,14 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void shouldSearchEmptyField() {
+        String text = "";
+
+        Product[] expected = new Product[]{};
+        Product[] actual = productManager.searchBy(text);
+        assertArrayEquals(expected, actual);
+    }
+
+
 }
